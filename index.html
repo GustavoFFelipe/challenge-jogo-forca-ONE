@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                  <!--------------------------Fonts-------------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+                  <!--------------------------Styles-------------------------->
+  <link rel="stylesheet" href="global.css">
+  <title>Jogo da Forca</title>
+</head>
+<body>
+  <header>
+      <a href="https://gustavofelipe.netlify.app/"><img src="anansi-favicon.png" alt=""></a>
+      <a href="https://gustavofelipe.netlify.app/"><h4>Anansi</h4></a>
+  </header>
+    <main>
+      <section id="first-page">
+        <button id="startBtn" onClick=handleShowGame()>Comece a jogar agora!</button>
+        <button id="addBtn" onClick=handleAddWord()>Adicione uma nova palavra</button>
+      </section>
+      <!--------------------------------------Game display--------------------------------------------->
+      <section id="start-game">
+        <canvas></canvas>
+        <div class="style-div">
+          <button id="newGame">Novo jogo</button>
+          <button id="giveUp" onClick=backDisplay()>Desistir</button>
+        </div>
+      
+
+      </section>
+      <!--------------------------------------Add new word display--------------------------------------------->
+
+      <section id="addWord">
+        <input id="text-area"  type="text" placeholder="Please add a new word ou phrase..."></input>
+        <div id="info">
+          <img src="/info.png" alt=""><span>Max. 8 characters</span>
+        </div>
+          <div class="style-div">
+            <button id="play-game" onClick=addNewWord() >Salvar e continuar</button>
+            <button id="back" onClick=handleAddWord()>Cancelar</button>
+          </div>
+       
+      </section>
+
+    </main>
+
+    <footer>
+      <h6>Desenvolvido por Gustavo Felipe. Veja mais em <a href="https://gustavofelipe.netlify.app/">Anansi</a></h6>
+    </footer>
+    <script src="/scripts.js"></script>
+
+</body>
+</html>

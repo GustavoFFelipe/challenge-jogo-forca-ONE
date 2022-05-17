@@ -1,0 +1,246 @@
+
+
+:root{
+  --background: #E5E5E5;
+  --blue: #0A3871;
+}
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html{
+  font-size: 62.5%;
+}
+
+body, input, textarea, button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+
+}
+
+body{
+  background: var(--background);
+  width: 100%;
+  font-size: 1.6rem;
+}
+header {
+  width: 80%;
+  height: 8rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+header h4{
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--blue);
+  margin-left:  2rem;
+  margin-top: 1rem;
+}
+header img {
+  width: 6rem;
+  height :6rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/*--------- Start Page ------------*/
+#first-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 81vh;
+}
+
+#first-page button{
+  margin: 1rem auto;
+  width: 30rem;
+  height: 8rem;
+  border-radius:  2.4rem;
+ font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+ #startBtn{
+ background: var(--blue);
+ color: #fff;
+border: 0;
+}
+#addBtn {
+    color: var(--blue);
+    background: transparent;
+    border: 1px solid var(--blue);
+    width: 30rem;
+     height: 6rem;
+}
+#startBtn:hover{
+  background: transparent;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  cursor: pointer;
+  transition: filter .3s;
+}
+#addBtn:hover{
+  cursor: pointer;
+  transition: .3s;
+  background: var(--blue);
+  color: #fff;
+}
+
+/*--------------------Game Page -------------------*/
+#start-game{
+  display: none;
+  width: 80%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-game canvas{
+  max-width: 1200px;
+  max-height: 800px;
+width:100%;
+background: transparent;
+margin: auto;
+height: 60vh;
+padding: 3rem 5rem;
+}
+#newGame {
+  background: var(--blue);
+  color: #fff;
+  border: 1px solid var(--blue);
+}
+#giveUp{
+  background: transparent;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+#giveUp:hover{
+  background: var(--blue);
+  color: #fff;
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  transition: 0.3s;
+}
+#newGame:hover{
+  background: transparent;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  transition: 0.3s;
+}
+/*-----------------Add Words ----------------------*/
+#addWord {
+  display: none;
+  width: 80%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#addWord input {
+width:100%;
+background: transparent;
+margin: auto;
+border: 0;
+height: 60vh;
+padding: 3rem 5rem;
+position: relative;
+}
+#text-area{
+  font-size: 2rem;
+  color: var(--blue);
+}
+#text-area::placeholder{
+  position: absolute;
+  color: var(--blue);
+ font-size: 2rem;
+ top: 2rem;
+}
+#text-area:focus{
+ outline: 2px solid var(--blue);
+ border-radius: 4rem;
+}
+#info {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+}
+#info img{
+  margin-left: 11%;
+ 
+}
+#info span {
+  font-size: 1rem;
+  margin-left:1rem;
+
+}
+.style-div {
+  width: 80%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: .3rem auto;
+}
+.style-div button{
+        width: 30rem;
+        height: 7rem;
+        margin: 0 2rem;
+        border-radius: 2.24rem;
+}
+#play-game {
+  border: 1px solid var(--blue);
+  background: var(--blue);
+  color:#fff;
+}
+#back {
+  border: 1px solid var(--blue);
+  background: transparent;
+  color:var(--blue);
+}
+
+#play-game:hover {
+  border: 1px solid var(--blue);
+  background: transparent;
+  color:var(--blue);
+  cursor: pointer;
+  transition: .3s;
+}
+#back:hover {
+  border: 1px solid var(--blue);
+  background: var(--blue);
+  color:#fff;
+  cursor: pointer;
+  transition: .3s;
+}
+/*-------------------Canvas ------------------*/
+
+
+
+
+
+
+/*---------------Footer-----------------*/
+
+footer{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: .3rem
+}
+footer h6 {
+  margin: 1rem auto;
+  color: var(--blue)
+}
+footer a{
+  color: var(--blue);
+}
