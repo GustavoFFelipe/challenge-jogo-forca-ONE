@@ -26,8 +26,11 @@
       <!--------------------------------------Game display--------------------------------------------->
       <section id="start-game">
         <canvas></canvas>
+        <div id="wrong-letters">
+          
+        </div>
         <div class="style-div">
-          <button id="newGame">Novo jogo</button>
+          <button id="newGame" onClick=newGame()>Novo jogo</button>
           <button id="giveUp" onClick=backDisplay()>Desistir</button>
         </div>
       
@@ -36,21 +39,18 @@
       <!--------------------------------------Add new word display--------------------------------------------->
 
       <section id="addWord">
-        <input id="text-area"  type="text" placeholder="Please add a new word ou phrase..."></input>
+        <input id="text-area"  type="text"  onfocus="this.value='';"; placeholder="Please add a new word ou phrase..."></input>
         <div id="info">
           <img src="/info.png" alt=""><span>Max. 8 characters</span>
         </div>
           <div class="style-div">
             <button id="play-game" onClick=addNewWord() >Salvar e continuar</button>
-            <button id="back" onClick=handleAddWord()>Cancelar</button>
+            <button id="back" onClick=backDisplay()>Cancelar</button>
           </div>
        
       </section>
         
     </main>
-    <div id="hidden-div">
-      <h5>You already chose this letter, please try another!</h5>
-    </div>
     <footer>
       <h6>Desenvolvido por Gustavo Felipe. Veja mais em <a href="https://gustavofelipe.netlify.app/">Anansi</a></h6>
     </footer>

@@ -108,8 +108,8 @@ border: 0;
 width:100%;
 background: transparent;
 margin: auto;
-height: 60vh;
-padding: 3rem 5rem;
+height: 55vh;
+padding: 3rem 5rem 0 5rem;
 }
 #newGame {
   background: var(--blue);
@@ -221,7 +221,10 @@ position: relative;
   transition: .3s;
 }
 /*-------------------Canvas ------------------*/
-
+#wrong-letter {
+  font-size: 1.4rem;
+  color: var(--blue);
+}
 /*---------Already used letter -------------*/
 #hidden-div{
   margin: 0 auto;
@@ -236,8 +239,15 @@ position: relative;
   color: #fff;
 display: none;
 }
-#hidden-div.show {
-  display: block;
+#wrong-letters{
+  margin-top: 0;
+  margin-bottom:  2rem;
+  text-align: center;
+}
+span {
+  margin: 0 .5rem;
+  font-size: 2rem;
+  color: var(--blue);
 }
 
 
@@ -251,12 +261,16 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: .3rem
+  bottom: .2rem
 }
 footer h6 {
-  margin: 1rem auto;
+  margin: 2rem auto 0 auto;
   color: var(--blue)
 }
 footer a{
   color: var(--blue);
 }
+
+
+/*--------------Animations---------------------*/
+
