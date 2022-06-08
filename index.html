@@ -25,10 +25,11 @@
       </section>
       <!--------------------------------------Game display--------------------------------------------->
       <section id="start-game">
-        <canvas></canvas>
-        <div id="wrong-letters">
-          
+        <div id="div-aparece-forca" class="canvas">
+          <canvas id="forca" height="860px" width="1200px" ></canvas>
+          <div class="sublinhado"></div>
         </div>
+      
         <div class="style-div">
           <button id="newGame" onClick=newGame()>Novo jogo</button>
           <button id="giveUp" onClick=backDisplay()>Desistir</button>
