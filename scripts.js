@@ -143,7 +143,7 @@ function handleShowGame() {
     showButton.style.display = 'none';
     showGame.style.display = 'block'
   } else {
-    showButton.style.display = 'flex';
+    showButton.style.display = 'flex';handleAddWord
     showGame.style.display = 'none'
   }
 
@@ -155,11 +155,11 @@ function addNewWord(){
   const newWord = document.getElementById('text-area').value.toLocaleUpperCase('PT-BR');
 
   if( newWord !== ""){
-    secretWords.push(newWord);
+    palavras.push(newWord);
   } else{
     alert('Please some word')
   }
-  console.log(newWord)
+
   handleAddWord()
 }
 
