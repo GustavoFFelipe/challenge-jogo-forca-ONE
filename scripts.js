@@ -85,16 +85,23 @@ function escreverLetraIncorreta(letra, errorsLeft){
   tabuleiro.strokeStyle = "#0A3871"
   tabuleiro.fillText(letra, 235+(40*(10-errorsLeft)),710,40)
 }
-
+function mensagemVitoria(){
+  if(letras.length == secretaPalavra.length){
+    alert('Parabens')
+  }
+}
 function verificarLetraCorreta(key){
       if(letras.length < 1 || letras.indexOf(key) < 0){
         console.log(key)
         letras.push(key)
+     
         return false
+       
       } else{
         letras.push(key.toUpperCase())
         return true
       }
+     
 }
 
 function adicionarLetraCorreta(i){
@@ -105,7 +112,7 @@ function adicionarLetraIncorreta(letter){
     erros -= 1
     tratamentoErros()
     console.log(erros)
-    if(erros === 3){
+    if(erros === 2){
       alert('Infelismente suas chances acabaram! Tente um novo jogo e boa sorte.')
     }
   }
