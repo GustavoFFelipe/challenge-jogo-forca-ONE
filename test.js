@@ -1,20 +1,102 @@
-
+let tabuleiro = document.getElementById('forca').getContext('2d')
   function desenharForca(){
+    // Linha maior vertical
     tabuleiro.lineWidth = 6
     tabuleiro.lineCap = "round"
     tabuleiro.lineJoin = "round"
     tabuleiro.strokeStyle = "#0A3871"
     tabuleiro.beginPath()
-    tabuleiro.moveTo(100,0);
-   tabuleiro.lineTo(100, 100);
+    tabuleiro.moveTo(300,100);
+   tabuleiro.lineTo(300, 370);
    tabuleiro.stroke()
 tabuleiro.closePath()
-
+// linha horiontal
+tabuleiro.lineWidth = 6
+    tabuleiro.lineCap = "round"
+    tabuleiro.lineJoin = "round"
+    tabuleiro.strokeStyle = "#0A3871"
+    tabuleiro.beginPath()
+    tabuleiro.moveTo(300,100);
+   tabuleiro.lineTo(400, 100);
+   tabuleiro.stroke()
+tabuleiro.closePath()
+// Linha menor vertical tabuleiro
+tabuleiro.lineWidth = 6
+    tabuleiro.lineCap = "round"
+    tabuleiro.lineJoin = "round"
+    tabuleiro.strokeStyle = "#0A3871"
+    tabuleiro.beginPath()
+    tabuleiro.moveTo(400,100);
+   tabuleiro.lineTo(400, 120);
+   tabuleiro.stroke()
+tabuleiro.closePath()
   }desenharForca()
 
-
-
-
+function cabeçaBoneco(){
+  tabuleiro.lineWidth = 6
+      tabuleiro.lineCap = "round"
+      tabuleiro.lineJoin = "round"
+      tabuleiro.strokeStyle = "#0A3871"
+  tabuleiro.beginPath();
+  tabuleiro.arc(400, 145, 25,0, 2*Math.PI, true);
+  tabuleiro.stroke();
+  tabuleiro.closePath()
+}
+function troncoBoneco(){
+  tabuleiro.lineWidth = 6
+    tabuleiro.lineCap = "round"
+    tabuleiro.lineJoin = "round"
+    tabuleiro.strokeStyle = "#0A3871"
+    tabuleiro.beginPath()
+    tabuleiro.moveTo(400,170);
+   tabuleiro.lineTo(400, 250);
+   tabuleiro.stroke()
+  tabuleiro.closePath()
+}
+function braçoDireitoBoneco(){
+tabuleiro.lineWidth = 6
+tabuleiro.lineCap = "round"
+tabuleiro.lineJoin = "round"
+tabuleiro.strokeStyle = "#0A3871"
+tabuleiro.beginPath()
+tabuleiro.moveTo(400,200);
+tabuleiro.lineTo(430, 220);
+tabuleiro.stroke()
+tabuleiro.closePath()
+}
+function braçoEsquerdoBoneco(){
+tabuleiro.lineWidth = 6
+tabuleiro.lineCap = "round"
+tabuleiro.lineJoin = "round"
+tabuleiro.strokeStyle = "#0A3871"
+tabuleiro.beginPath()
+tabuleiro.moveTo(400,200);
+tabuleiro.lineTo(370, 220);
+tabuleiro.stroke()
+tabuleiro.closePath()
+}
+function pernaDireitaBoneco(){
+  tabuleiro.lineWidth = 6
+  tabuleiro.lineCap = "round"
+  tabuleiro.lineJoin = "round"
+  tabuleiro.strokeStyle = "#0A3871"
+  tabuleiro.beginPath()
+  tabuleiro.moveTo(400,250);
+  tabuleiro.lineTo(420, 320);
+  tabuleiro.stroke()
+  tabuleiro.closePath()
+}
+function pernaEsquerdaBoneco(){
+tabuleiro.lineWidth = 6
+tabuleiro.lineCap = "round"
+tabuleiro.lineJoin = "round"
+tabuleiro.strokeStyle = "#0A3871"
+tabuleiro.beginPath()
+tabuleiro.moveTo(400,250);
+tabuleiro.lineTo(380, 320);
+tabuleiro.stroke()
+tabuleiro.closePath()
+}
 
 
 

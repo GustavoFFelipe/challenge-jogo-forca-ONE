@@ -9,10 +9,40 @@
   let palavraCorreta ='';
   let erros = 9;
 
-  function desenharForca(){
-    tabuleiro.moveTo(100,0);
-   tabuleiro.lineTo(100, 100);
-  }desenharForca()
+ //Desenha a Forca
+ function desenharForca(){
+  // Linha maior vertical
+  tabuleiro.lineWidth = 6
+  tabuleiro.lineCap = "round"
+  tabuleiro.lineJoin = "round"
+  tabuleiro.strokeStyle = "#0A3871"
+  tabuleiro.beginPath()
+  tabuleiro.moveTo(300,100);
+ tabuleiro.lineTo(300, 470);
+ tabuleiro.stroke()
+tabuleiro.closePath()
+// linha horiontal
+tabuleiro.lineWidth = 6
+  tabuleiro.lineCap = "round"
+  tabuleiro.lineJoin = "round"
+  tabuleiro.strokeStyle = "#0A3871"
+  tabuleiro.beginPath()
+  tabuleiro.moveTo(300,100);
+ tabuleiro.lineTo(400, 100);
+ tabuleiro.stroke()
+tabuleiro.closePath()
+// Linha menor vertical tabuleiro
+tabuleiro.lineWidth = 6
+  tabuleiro.lineCap = "round"
+  tabuleiro.lineJoin = "round"
+  tabuleiro.strokeStyle = "#0A3871"
+  tabuleiro.beginPath()
+  tabuleiro.moveTo(400,100);
+ tabuleiro.lineTo(400, 120);
+ tabuleiro.stroke()
+tabuleiro.closePath()
+}desenharForca()
+
 
 // função para escolher palavras secretas
 function escolherPalavraSecreta(){
@@ -73,6 +103,11 @@ function adicionarLetraCorreta(i){
 function adicionarLetraIncorreta(letter){
   if(secretaPalavra.indexOf(letter) <= 0){
     erros -= 1
+    tratamentoErros()
+    console.log(erros)
+    if(erros === 3){
+      alert('Infelismente suas chances acabaram! Tente um novo jogo e boa sorte.')
+    }
   }
 }
 document.onkeydown = (e) => {
@@ -150,22 +185,91 @@ function handleAddWord(){
 function newGame(){
   document.location.reload(true);
 }
-
-//--------------------------Canvas Script ---------------------------//
-
-function drawErrorCanvas(){
-const tabuleiro = document.getElementById("forca").getContext('2d');;
-
+/*-------Funções de erros -----------*/
+function cabeçaBoneco(){
+  tabuleiro.lineWidth = 6
+      tabuleiro.lineCap = "round"
+      tabuleiro.lineJoin = "round"
+      tabuleiro.strokeStyle = "#0A3871"
+  tabuleiro.beginPath();
+  tabuleiro.arc(400, 145, 25,0, 2*Math.PI, true);
+  tabuleiro.stroke();
+  tabuleiro.closePath()
+}
+function troncoBoneco(){
+  tabuleiro.lineWidth = 6
+    tabuleiro.lineCap = "round"
+    tabuleiro.lineJoin = "round"
+    tabuleiro.strokeStyle = "#0A3871"
+    tabuleiro.beginPath()
+    tabuleiro.moveTo(400,170);
+   tabuleiro.lineTo(400, 250);
+   tabuleiro.stroke()
+  tabuleiro.closePath()
+}
+function bracoDireitoBoneco(){
 tabuleiro.lineWidth = 6
 tabuleiro.lineCap = "round"
 tabuleiro.lineJoin = "round"
 tabuleiro.strokeStyle = "#0A3871"
 tabuleiro.beginPath()
- if(erros === 9 ){
-  
- }
+tabuleiro.moveTo(400,200);
+tabuleiro.lineTo(430, 220);
 tabuleiro.stroke()
 tabuleiro.closePath()
-
+}
+function bracoEsquerdoBoneco(){
+tabuleiro.lineWidth = 6
+tabuleiro.lineCap = "round"
+tabuleiro.lineJoin = "round"
+tabuleiro.strokeStyle = "#0A3871"
+tabuleiro.beginPath()
+tabuleiro.moveTo(400,200);
+tabuleiro.lineTo(370, 220);
+tabuleiro.stroke()
+tabuleiro.closePath()
+}
+function pernaDireitaBoneco(){
+  tabuleiro.lineWidth = 6
+  tabuleiro.lineCap = "round"
+  tabuleiro.lineJoin = "round"
+  tabuleiro.strokeStyle = "#0A3871"
+  tabuleiro.beginPath()
+  tabuleiro.moveTo(400,250);
+  tabuleiro.lineTo(420, 320);
+  tabuleiro.stroke()
+  tabuleiro.closePath()
+}
+function pernaEsquerdaBoneco(){
+tabuleiro.lineWidth = 6
+tabuleiro.lineCap = "round"
+tabuleiro.lineJoin = "round"
+tabuleiro.strokeStyle = "#0A3871"
+tabuleiro.beginPath()
+tabuleiro.moveTo(400,250);
+tabuleiro.lineTo(380, 320);
+tabuleiro.stroke()
+tabuleiro.closePath()
 }
 
+function tratamentoErros(){
+  //switch case
+  if(erros === 8){
+    cabeçaBoneco();
+  }
+  if(erros === 7){
+    troncoBoneco();
+  }
+  if(erros === 6){
+    bracoDireitoBoneco()
+  }
+  if(erros === 5){
+    bracoEsquerdoBoneco()
+  }
+  if(erros === 4){
+    pernaEsquerdaBoneco()
+  }
+  if(erros === 3){
+    pernaDireitaBoneco()
+  }
+}
